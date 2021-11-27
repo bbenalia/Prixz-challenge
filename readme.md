@@ -1,5 +1,3 @@
-https://woocommerce.github.io/woocommerce-rest-api-docs/
-
 `#php` `#woocommerce` `#RESTFull`
 
 # PHP API REST using WooCommerce
