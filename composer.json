@@ -1,0 +1,19 @@
+{
+    "name": "brahi/prixz-challenge-api",
+    "description": "api prixz challenge",
+    "autoload": {
+        "psr-4": {
+            "Brahi\\PrixzChallengeApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Brahim",
+            "email": "brahimcasas@hotmail.es"
+        }
+    ],
+    "require": {
+        "automattic/woocommerce": "^3.0",
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
