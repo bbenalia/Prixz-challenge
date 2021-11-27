@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "adfd7302-1b32-4c05-8cbf-387989b379c9",
+		"name": "Prixz-Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LIST orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/prixz-challenge-api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prixz-challenge-api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET order by Id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/prixz-challenge-api/orders/72",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prixz-challenge-api",
+						"orders",
+						"72"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD Order",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payment_method\": \"bacs\",\r\n    \"payment_method_title\": \"Direct Bank Transfer\",\r\n    \"set_paid\": true,\r\n    \"billing\": {\r\n        \"first_name\": \"John\",\r\n        \"last_name\": \"Doe\",\r\n        \"address_1\": \"969 Market\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"San Francisco\",\r\n        \"state\": \"CA\",\r\n        \"postcode\": \"94103\",\r\n        \"country\": \"US\",\r\n        \"email\": \"john.doe@example.com\",\r\n        \"phone\": \"(555) 555-5555\"\r\n    },\r\n    \"shipping\": {\r\n        \"first_name\": \"John\",\r\n        \"last_name\": \"Doe\",\r\n        \"address_1\": \"969 Market\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"San Francisco\",\r\n        \"state\": \"CA\",\r\n        \"postcode\": \"94103\",\r\n        \"country\": \"US\"\r\n    },\r\n    \"line_items\" : [\r\n        {\r\n            \"product_id\": 93,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_id\": 22,\r\n            \"variation_id\": 23,\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"shipping_lines\": [\r\n        {\r\n            \"method_id\": \"flat_rate\",\r\n            \"method_title\": \"Flat Rate\",\r\n            \"total\" : \"10.00\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/prixz-challenge-api/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prixz-challenge-api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MODIFY post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/prixz-challenge-api/orders/72",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prixz-challenge-api",
+						"orders",
+						"72"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Hola 1\",\r\n    \"body\": \"Soy body 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/prixz-challenge-api/orders/74",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prixz-challenge-api",
+						"orders",
+						"74"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
